@@ -1,4 +1,4 @@
-# Part 1 
+# Part 1 语法规则
 ## 一、命令处理
 - 基本编辑内容与编程差不多
 - 命令 + 参数 -> 结果0
@@ -24,9 +24,10 @@
 ### 1. exact 严格匹配，无通配符
 ### 2. glob 有通配符
 - 通配符  
-![Alt text](image-1.png)
+![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-1.png?raw=true)
 ### 3. 正则表达式 
-- ![Alt text](image-2.png)
+- ![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-2.png?raw=true)
+- 这个能随便搜个网站来练练:p
 ---
 # Part 3 变量
 - 1.用`set`创建,`unset`移除
@@ -44,7 +45,7 @@
 ### `⑤string index str charlndex` 返回charlndex的位置字符
 ### `⑥string range str first last` 返回first-last区间的字符
 ### `⑦string replace str first last newstring` 用newstring替换first-last的字符串，如果呢我string不存在，则删除该区间的字符串 
-### `⑧s tring map mapping str` 也是替换，例子自己额外查:p
+### `⑧string map mapping str` 也是替换，例子自己额外查:p
 ### .........
 ## 2.`list`的用法
 ### (1)创建`list`
@@ -56,83 +57,89 @@
 - 拼接、替换、重复、分割、添加...
 ## 3.`array`的用法
 ### (1)创建`array`
-- `set arrayName(variety) index`
+- `set arrayName(key) value`
 ### (2)其他用法自行查阅资料...
 # Part 3 表达式
 ### `expr`命令
 - 具体操作  
-![Alt text](image-3.png)
+![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-3.png?raw=true)
 - ！！表达式注意操作数类型  
-![Alt text](image-4.png)
+![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-4.png?raw=true)
 # Part 4 流控制
 ## 1.`if`
 ### `if`的用法类似于verilog的if
-- eg：![Alt text](image-6.png)
+- eg：![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-6.png?raw=true)
 - ！！`{`与`if`写在同一行 且 `if`与`{`之间必须要有空格
 ## 2.`while`
 ### 同样类似于verilog/C的`while`
-- eg:![Alt text](image-5.png)
+- eg:![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-5.png?raw=true)
 ## 3.`for`
 ## 4.`foreach` （需熟练）
 - `foreach varname list body`将list赋值给varname进行循环
-- eg:![Alt text](image-7.png)
+- eg:![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-7.png?raw=true)
 - 可支持多变量数组:  
  `foreach varlist1 list1 ?varlist2  list2?...`  
  `foreach {varlist1 varlist2...} {list}`
  ## 5.`switch`
  ### 用法类似于verilog 的`case`
  - 支持三种匹配方式（默认 **exact**）
- - eg：![Alt text](image-8.png)
+ - eg：![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-8.png?raw=true)
 # Part 5 函数
 ## 1. 基本结构  
-![Alt text](image-10.png)  跟C语言差不多，不过规则必C语言稍严格
+![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-10.png?raw=true)  跟C语言差不多，不过规则必C语言稍严格
 ## 2. 写法
 ### (1)同基本结构的例子
 ### (2)带缺省值
-- eg：![Alt text](image-11.png)
+- eg：![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-11.png?raw=true)
 - ！注意：缺省值一定要写在参数的末尾，且有缺省值的参数必须含有缺省值（默认值）
 ### (3)可变参数
-- eg:![Alt text](image-12.png) 
+- eg:![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-12.png?raw=true) 
 ### 
 # Part 6 文件操作
 ## 1.读写文件
 ### (1)打开文件  
-![Alt text](image-18.png)  
+![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-18.png?raw=true)  
 - 操作符  
-![Alt text](image-19.png)
+![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-19.png?raw=true)
 ### (2)读取文件内容
 - 这里是逐行读取**rfile_handle**指向的文件，将带有**"VIOLATED"**的行打印到**wfile_handle**指向的文件  
-![Alt text](image-20.png)
+![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-20.png?raw=true)
 ### (3)关闭文件  
-![Alt text](image-21.png)  
+![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-21.png?raw=true)  
 - 命令返回一个空字符串
 ## 2.文件操作
 ### (1)`glob`命令
 - 多用于查找文件
-- eg：![Alt text](image-22.png)
+- eg：![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-22.png?raw=true)
 - glob的通配符在上边有，自行查看
 ### (2)`file`命令
-- ![Alt text](image-23.png)
+- ![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-23.png?raw=true)
 # Part 7 常用命令
 ## 感觉跟linux里边用的差不多...
 ----------------
 # Part 😈 其余小知识
 ### 1. 反斜杠
-![Alt text](image.png)
+![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/2.png?raw=true)
 ### 2. glob 返回的待处理长参数
 - 比如空格可以在`glob`命令前用`{*}`进行分割
 - eg: **`file delte {*}[glob *v]`**
 ### 3. option中如果有 `?-nocase?`两问号括住的表示为*可用可不用*
 ### 4.`incr`命令用于自增，`incr varName ?increment?`，默认为1
 ### 5.`-`表示使用和下一个模式一样的脚本
-- eg：![Alt text](image-9.png)
+- eg：![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-9.png?raw=true)
 ### 6.实现`-help`
-- `command_group proc_name` 写函数前需要提前创建proc_name![Alt text](image-15.png)
-![Alt text](image-16.png)
-- ![Alt text](image-17.png)
-- ![Alt text](image-13.png)  注意下边红框的名称（定义很ez故不多说）
-- ![Alt text](image-14.png)
+- `command_group proc_name` 写函数前需要提前创建proc_name![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-15.png?raw=true)
+![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-16.png?raw=true)
+- ![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-17.png?raw=true)
+- ![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-13.png?raw=true)  注意下边红框的名称（定义很ez故不多说）
+- ![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/image-14.png?raw=true)
 - `option`表示可指定可不指定，`required`表示必须
 - 定义函数中只有一个参数`args`，所以必须解析参数，如上红框圈住的那一栏
 ---
 # 思考/疑惑
+ 1. array相关得再看看..那么像matlab的字典的.  
+ 2. 看不懂那个讲课的脚本.再看看
+# Test
+自己写了个calculate.tcl，虚拟机突然莫名其妙连不上网传不到github.
+- ![Alt text](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/1.png?raw=true)
+- 运行  ![?](https://github.com/ArvailWei/NomalLearning/blob/main/tcl/1742881737019.jpg?raw=true)
